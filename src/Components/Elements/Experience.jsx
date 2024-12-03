@@ -1,11 +1,9 @@
 import React from "react";
-// Make sure to create this SCSS file and link it
 import { IoSchoolOutline } from "react-icons/io5";
 import { MdOutlineWorkspacePremium } from "react-icons/md";
-import Education from "./Education";
 const experiences = [
   {
-    year: "Jun 2023 - Present",
+    year: "Jun 2023 - August 2024",
     role: "React JS - Developer/Project Manager",
     company: "Interactive Tech Solutions (ITSOLZ)",
   },

@@ -1,7 +1,7 @@
 import React from "react";
 import { RiMenu3Fill } from "react-icons/ri";
 import { AiOutlineClose } from "react-icons/ai";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 const Menu = ({ isOpen, toggleMenu }) => {
   const playOpenSound = () => {
@@ -10,7 +10,7 @@ const Menu = ({ isOpen, toggleMenu }) => {
   };
 
   const playCloseSound = () => {
-    const audio = new Audio(process.env.PUBLIC_URL + "/Assets/close.wav");
+    const audio = new Audio(process.env.PUBLIC_URL + "/Assets/Click.mp3");
     audio.play();
   };
 
@@ -30,19 +30,21 @@ const Menu = ({ isOpen, toggleMenu }) => {
           <a className="navbar-brand" href="#">
             W.
           </a>
+        
           <button
             className="navbar-toggler"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown"
+            onClick={handleToggleMenu} 
             aria-controls="navbarNavDropdown"
-            aria-expanded="false"
+            aria-expanded={isOpen ? "true" : "false"}
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon" />
+            {isOpen ? <AiOutlineClose size={25} /> : <RiMenu3Fill size={25} />} 
           </button>
+
+          {/* Navbar Menu Items */}
           <div
-            className="collapse navbar-collapse justify-content-end"
+            className={`collapse navbar-collapse justify-content-end ${isOpen ? "show" : ""}`}
             id="navbarNavDropdown"
           >
             <ul className="navbar-nav">
@@ -55,6 +57,7 @@ const Menu = ({ isOpen, toggleMenu }) => {
                   smooth={true}
                   offset={10}
                   duration={500}
+                  onClick={handleToggleMenu} 
                 >
                   Services
                 </Link>
@@ -68,6 +71,7 @@ const Menu = ({ isOpen, toggleMenu }) => {
                   smooth={true}
                   offset={-70}
                   duration={500}
+                  onClick={handleToggleMenu}
                 >
                   Skills
                 </Link>
@@ -81,6 +85,7 @@ const Menu = ({ isOpen, toggleMenu }) => {
                   smooth={true}
                   offset={-70}
                   duration={500}
+                  onClick={handleToggleMenu}
                 >
                   Portfolio
                 </Link>
@@ -94,6 +99,7 @@ const Menu = ({ isOpen, toggleMenu }) => {
                   smooth={true}
                   offset={-70}
                   duration={500}
+                  onClick={handleToggleMenu}
                 >
                   Experience
                 </Link>
@@ -107,6 +113,7 @@ const Menu = ({ isOpen, toggleMenu }) => {
                   smooth={true}
                   offset={-70}
                   duration={500}
+                  onClick={handleToggleMenu}
                 >
                   Contact
                 </Link>
