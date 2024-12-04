@@ -13,7 +13,7 @@ function Contact() {
           </p>
         </div>
         <div className="row justify-content-center mt-5">
-          <div className="col-md-3">
+          <div className="col-md-3 pb-3">
             <a
               href="https://wa.me/+923315786822"
               target="_blank"
@@ -29,7 +29,7 @@ function Contact() {
               </div>
             </a>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3 pb-3">
             <a
               href="https://www.linkedin.com/in/wasay-mohsin-062a521a0/"
               target="_blank"
@@ -45,7 +45,7 @@ function Contact() {
               </div>
             </a>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3 pb-3">
             <a
               href="mailto:mirzawasay276@gmail.com"
               className="card custom-card text-center"

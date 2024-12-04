@@ -235,7 +235,7 @@
     color: white;
   }
   .cv {
-    padding-top: 80px;
+    padding-top: 60px;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -644,16 +644,16 @@
   }
 }
 
-@keyframes scaleIn {
-  from {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
+// @keyframes scaleIn {
+//   from {
+//     transform: scale(0.8);
+//     opacity: 0;
+//   }
+//   to {
+//     transform: scale(1);
+//     opacity: 1;
+//   }
+// }
 
 @keyframes pulse {
   0% {
